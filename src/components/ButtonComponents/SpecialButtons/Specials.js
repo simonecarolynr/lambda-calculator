@@ -1,22 +1,18 @@
 import React,{useState} from "react";
-import { SpecialButton } from "./SpecialButtons.js";
-import { specials } from "../../data.js";
+import { SpecialButton } from "./SpecialButton.js";
+import { specials } from "../../../data.js";
 //import any components needed
 
 //Import your array data to from the provided data file
 
-export const Specials = (props) => {
-  const [specialsState, setSpecialsState] = useState(specials);  
+export const Specials = () => {
+  const [specialsState, setSpecialsState] = useState(specials);
   return (
-    <div>
+    <div className="SpecialsContainer">
       {specialsState.map( specialCharacters => {
-         return(
-           <SpecialsButton 
-             specialCharacters={specialCharacters}
-           />
-         );
-       })}
-
+        return <SpecialButton value={specialCharacters}/>
+      })
+      }
     </div>
   );
 };
