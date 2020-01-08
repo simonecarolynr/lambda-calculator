@@ -10,16 +10,20 @@ import { Display } from "./components/DisplayComponents/Display"
 export function App() {
     return (
       <div className="container">
+        <div className="logo-container">
         <Logo />
+        </div>
         <div className="App">
-          <Display />
+          <div className="display">
+            <Display />
+          </div>
           <div className="ButtonContainers">
             <Specials/>
             <Numbers/>
             <Operators/>
           </div>
         </div>
-      </div>
+        </div>
     )
   }
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
